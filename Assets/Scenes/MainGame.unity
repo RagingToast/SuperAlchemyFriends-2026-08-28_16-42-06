@@ -119,28 +119,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &385934644 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4877444522752809658, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
-  m_PrefabInstance: {fileID: 1704083191508799650}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1168399639 stripped
+--- !u!1 &360964834 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8841322484273615283, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7853832617507251734, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
   m_PrefabInstance: {fileID: 1704083191508799650}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1168399647
+--- !u!114 &360964840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168399639}
+  m_GameObject: {fileID: 360964834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afb79a98c2875b14490d579e4b706c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Actions
+  potion: {fileID: 360964834}
+  fpCamera: {fileID: 2089966626}
+--- !u!4 &385934644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4877444522752809658, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+  m_PrefabInstance: {fileID: 1704083191508799650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1560671427
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +682,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2605156646426899091, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605156646426899091, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -710,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1168399647}
+      objectReference: {fileID: 360964840}
     - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -783,9 +789,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8841322484273615283, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7853832617507251734, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1168399647}
+      addedObject: {fileID: 360964840}
   m_SourcePrefab: {fileID: 100100000, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
