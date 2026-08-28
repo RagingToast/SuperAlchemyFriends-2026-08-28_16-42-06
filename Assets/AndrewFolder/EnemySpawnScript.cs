@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class EnemySpawnScript : MonoBehaviour
@@ -12,7 +11,7 @@ public class EnemySpawnScript : MonoBehaviour
 
     List<GameObject> pooledObjects = new List<GameObject>();
 
-    void Start()
+    private void Start()
     {
         SetupLocalPool(speedEnemyData.enemyPrefab, speedEnemyData.numberOfEnemies);
         SetupLocalPool(rangedEnemyData.enemyPrefab, rangedEnemyData.numberOfEnemies);
@@ -21,7 +20,7 @@ public class EnemySpawnScript : MonoBehaviour
         ActivateEnemiesAtSpawnPoints();
     }
 
-    void Update()
+    private void Update()
     {
         bool allEnemiesDestroyed = true;
 
@@ -40,7 +39,7 @@ public class EnemySpawnScript : MonoBehaviour
         }
     }
 
-    void SetupLocalPool(GameObject prefab, int count)
+    private void SetupLocalPool(GameObject prefab, int count)
     {
         for (int i = 0; i < count; i++)
         {
@@ -50,7 +49,7 @@ public class EnemySpawnScript : MonoBehaviour
         }
     }
 
-    void ActivateEnemiesAtSpawnPoints()
+    private void ActivateEnemiesAtSpawnPoints()
     {
         int spawnCount = Mathf.Min(spawnPoints.Count, pooledObjects.Count);
 
