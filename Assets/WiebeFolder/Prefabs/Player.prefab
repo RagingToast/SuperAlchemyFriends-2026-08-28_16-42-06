@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2579260003493260530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: groundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1746362408658088591}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HoldPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4877444522752809658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lookAt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,11 +109,12 @@ GameObject:
   - component: {fileID: 5450856540923654476}
   - component: {fileID: 6256169573178861761}
   - component: {fileID: 5476064778774355250}
-  - component: {fileID: 6622250944637009098}
-  - component: {fileID: 8242803343385940497}
-  m_Layer: 0
+  - component: {fileID: 775409646762949877}
+  - component: {fileID: 3156815110155714410}
+  - component: {fileID: 1710812809104380752}
+  m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +275,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6622250944637009098}
+      - m_Target: {fileID: 775409646762949877}
         m_TargetAssemblyTypeName: Actions, Assembly-CSharp
         m_MethodName: OnThrow
         m_Mode: 0
@@ -290,7 +291,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Throw[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8242803343385940497}
+      - m_Target: {fileID: 3156815110155714410}
         m_TargetAssemblyTypeName: PotionStates, Assembly-CSharp
         m_MethodName: OnPotionA
         m_Mode: 0
@@ -306,7 +307,7 @@ MonoBehaviour:
     m_ActionName: 'Player/PotionA[/Keyboard/1]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8242803343385940497}
+      - m_Target: {fileID: 3156815110155714410}
         m_TargetAssemblyTypeName: PotionStates, Assembly-CSharp
         m_MethodName: OnPotionB
         m_Mode: 0
@@ -322,7 +323,7 @@ MonoBehaviour:
     m_ActionName: 'Player/PotionB[/Keyboard/2]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8242803343385940497}
+      - m_Target: {fileID: 3156815110155714410}
         m_TargetAssemblyTypeName: PotionStates, Assembly-CSharp
         m_MethodName: OnPotionC
         m_Mode: 0
@@ -385,7 +386,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &6622250944637009098
+--- !u!114 &775409646762949877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Actions
   fpCamera: {fileID: 0}
   potionHold: {fileID: 1746362408658088591}
---- !u!114 &8242803343385940497
+--- !u!114 &3156815110155714410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,4 +416,24 @@ MonoBehaviour:
   potionB: {fileID: 1413936430384642683, guid: 8617ce6ade4e03e4e8c554482fb8f49e, type: 3}
   potionC: {fileID: 2133069486606235552, guid: 1dfc24b590a757d46b7c4420322bae94, type: 3}
   activePotion: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   state: 0
+--- !u!114 &1710812809104380752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841322484273615283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d10e5c1a3d4cb34ba6b60076a2d27fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHP: 100
+  currentHP: 0
+  minHP: 0
+  healthBar: {fileID: 0}
+  damageDealerTag: Enemy
