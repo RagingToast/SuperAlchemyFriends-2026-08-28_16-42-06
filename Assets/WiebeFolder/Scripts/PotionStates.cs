@@ -15,6 +15,7 @@ public class PotionStates : MonoBehaviour
     [SerializeField] private GameObject potionC;
 
     [HideInInspector] public GameObject activePotion;
+    [HideInInspector] public LayerMask enemyLayer;
     
     public static PotionStates instance;
     public PotionState state;
@@ -23,6 +24,8 @@ public class PotionStates : MonoBehaviour
     {
         instance = this;
         activePotion = potionA;
+        enemyLayer = LayerMask.GetMask("SpeedScrub");
+        
     }
     
     void Update()
@@ -35,6 +38,7 @@ public class PotionStates : MonoBehaviour
                 // potionC.SetActive(false);
                 
                 activePotion = potionA;
+                enemyLayer = LayerMask.GetMask("SpeedScrub");
                 break;
             
             case PotionState.potionB:
@@ -43,6 +47,7 @@ public class PotionStates : MonoBehaviour
                 // potionC.SetActive(false);
                 //
                 activePotion = potionB;
+                enemyLayer = LayerMask.GetMask("TankScrub");
                 break;
             
             case PotionState.potionC:
@@ -51,6 +56,7 @@ public class PotionStates : MonoBehaviour
                 // potionC.SetActive(true);
                 
                 activePotion = potionC;
+                enemyLayer = LayerMask.GetMask("RangeScrub");
                 break;
         }
     }

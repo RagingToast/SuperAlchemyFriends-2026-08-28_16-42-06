@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7938bbdd56713b34bb622fad8e320bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Potion
+  potionNucleus: {fileID: 5214164493040198114, guid: 73506c10ae4ef104ca6811d495b86c5d, type: 3}
 --- !u!54 &2323964919701261939
 Rigidbody:
   m_ObjectHideFlags: 0
