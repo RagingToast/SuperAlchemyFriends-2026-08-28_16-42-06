@@ -26,12 +26,12 @@ public class EnemyBaseScript : MonoBehaviour
         objectPool = GetComponent<ObjectPool>();
         objectPool.PoolSetup(enemyStatsData.projectilePrefab, enemyStatsData.projectileAmount);
 
-        playerCam = PlayerMovement.Instance.GetComponentInChildren<Camera>();
+        playerCam = Movement.Instance.GetComponentInChildren<Camera>();
     }
 
     public virtual void Update()
     {
-        if (GetComponentInChildren<EnemyHealth>().isDead)
+        if (GetComponent<EnemyHealth>().isDead)
         {
             agent.enabled = false;
             return;
@@ -94,7 +94,7 @@ public class EnemyBaseScript : MonoBehaviour
 
         attackInCooldown = true;
 
-        transform.LookAt(new Vector3(PlayerMovement.Instance.transform.position.x, transform.position.y, PlayerMovement.Instance.transform.position.z));
+        transform.LookAt(new Vector3(Movement.Instance.transform.position.x, transform.position.y, Movement.Instance.transform.position.z));
 
         agent.isStopped = true;
         agent.ResetPath();
@@ -115,8 +115,16 @@ public class EnemyBaseScript : MonoBehaviour
     #region Chase State
     public virtual void Chase()
     {
-        Vector3 targetPos = new Vector3(PlayerMovement.Instance.transform.position.x, transform.position.y, PlayerMovement.Instance.transform.position.z);
+        Vector3 targetPos = new Vector3(Movement.Instance.transform.position.x, transform.position.y, Movement.Instance.transform.position.z);
         agent.SetDestination(targetPos);
     }
     #endregion
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, enemyStateData.attackRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, enemyStateData.alertRange);
+    }
 }

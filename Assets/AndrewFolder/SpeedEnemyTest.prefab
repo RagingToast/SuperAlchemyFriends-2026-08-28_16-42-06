@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 9109643163900550300}
   - component: {fileID: 8982766276580669085}
   - component: {fileID: 8975471014429641471}
-  m_Layer: 0
+  - component: {fileID: 1882784679404111152}
+  m_Layer: 7
   m_Name: SpeedEnemyTest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c947b412c81afaa47978d16cf30fec3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeedEnemy
-  enemyStateData: {fileID: 0}
+  enemyStateData: {fileID: 11400000, guid: 9a73532601bda3143ad1e31f53731633, type: 2}
   enemyStatsData: {fileID: 11400000, guid: dca34835b45fae24a804373b07786719, type: 2}
   agent: {fileID: 8975471014429641471}
 --- !u!195 &8975471014429641471
@@ -153,3 +154,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1882784679404111152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646987751715459921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d461a797b58d974b9a75de4e1c4b7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  enemyStatsData: {fileID: 11400000, guid: dca34835b45fae24a804373b07786719, type: 2}
+  currentHP: 0
+  isDead: 0

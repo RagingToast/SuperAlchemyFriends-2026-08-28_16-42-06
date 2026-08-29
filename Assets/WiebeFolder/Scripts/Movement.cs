@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
+    public static Movement Instance;
+
     [SerializeField] private Transform fpCamera;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundChecker;

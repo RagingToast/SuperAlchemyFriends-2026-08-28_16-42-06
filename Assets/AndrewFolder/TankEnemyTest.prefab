@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6254602737556284600}
   - component: {fileID: 8343004580048963882}
   - component: {fileID: 6274252211034168539}
-  m_Layer: 0
+  - component: {fileID: 3290655716854787008}
+  m_Layer: 8
   m_Name: TankEnemyTest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9709c1005f9614fa94c320dc16b3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankEnemy
-  enemyStateData: {fileID: 0}
+  enemyStateData: {fileID: 11400000, guid: 6b25f8feaac676d4b9fd0aa8caa4c721, type: 2}
   enemyStatsData: {fileID: 11400000, guid: 737a64d5b9646e94498218ca2d81fb87, type: 2}
   agent: {fileID: 6274252211034168539}
 --- !u!195 &6274252211034168539
@@ -153,3 +154,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3290655716854787008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236287966733990637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d461a797b58d974b9a75de4e1c4b7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  enemyStatsData: {fileID: 11400000, guid: 737a64d5b9646e94498218ca2d81fb87, type: 2}
+  currentHP: 0
+  isDead: 0
