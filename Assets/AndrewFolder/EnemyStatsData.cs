@@ -4,6 +4,10 @@ using UnityEngine;
 public class EnemyStatsData : ScriptableObject
 {
     public float damage;
-    public float attackRate;
+    public float health;
     public float speed;
+    public float attackRate;
+
+    public float projectileDamage;
+    public float projectileSpeed;
 }

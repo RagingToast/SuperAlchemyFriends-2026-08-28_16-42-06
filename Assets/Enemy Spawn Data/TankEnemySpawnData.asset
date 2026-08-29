@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b0af972661475d4c939ed92841e46b4, type: 3}
-  m_Name: TankSpawnData
+  m_Name: TankEnemySpawnData
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnData
   enemyPrefab: {fileID: 1236287966733990637, guid: 9609b3827cd03784bbb98c023465d2e2, type: 3}
   numberOfEnemies: 5

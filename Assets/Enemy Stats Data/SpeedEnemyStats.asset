@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SpeedEnemyStats
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStatsData
   damage: 5
-  attackRate: 3
+  health: 20
   speed: 10
+  attackRate: 3
