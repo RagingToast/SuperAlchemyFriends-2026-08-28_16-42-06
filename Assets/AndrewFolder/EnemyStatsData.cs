@@ -8,6 +8,8 @@ public class EnemyStatsData : ScriptableObject
     public float speed;
     public float attackRate;
 
+    public GameObject projectilePrefab;
+    public int projectileAmount;
     public float projectileDamage;
     public float projectileSpeed;
 }

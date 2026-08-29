@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 685976106}
   - component: {fileID: 685976105}
   - component: {fileID: 685976104}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,24 +567,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankEnemyTest
       objectReference: {fileID: 0}
-    - target: {fileID: 8343004580048963882, guid: 9609b3827cd03784bbb98c023465d2e2, type: 3}
-      propertyPath: agent
-      value: 
-      objectReference: {fileID: 986488688}
-    - target: {fileID: 8343004580048963882, guid: 9609b3827cd03784bbb98c023465d2e2, type: 3}
-      propertyPath: enemyStatsData
-      value: 
-      objectReference: {fileID: 11400000, guid: 737a64d5b9646e94498218ca2d81fb87, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9609b3827cd03784bbb98c023465d2e2, type: 3}
---- !u!195 &986488688 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 6274252211034168539, guid: 9609b3827cd03784bbb98c023465d2e2, type: 3}
-  m_PrefabInstance: {fileID: 986488687}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1009108125
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +624,7 @@ MonoBehaviour:
   - {fileID: 759997459}
   - {fileID: 1894285435}
   - {fileID: 978300985}
-  winScene: WinScene
+  winScene: LoseScene
 --- !u!1 &1045721083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1329,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6246203439608865794, guid: 8111c001929ce4e49bbedfcf897d824a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

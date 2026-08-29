@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TankEnemy
   enemyStateData: {fileID: 0}
-  enemyStatsData: {fileID: 0}
-  agent: {fileID: 0}
+  enemyStatsData: {fileID: 11400000, guid: 737a64d5b9646e94498218ca2d81fb87, type: 2}
+  agent: {fileID: 6274252211034168539}
 --- !u!195 &6274252211034168539
 NavMeshAgent:
   m_ObjectHideFlags: 0
