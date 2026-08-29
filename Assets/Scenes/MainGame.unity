@@ -124,6 +124,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4877444522752809658, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
   m_PrefabInstance: {fileID: 1704083191508799650}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1168399648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8242803343385940497, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+  m_PrefabInstance: {fileID: 1704083191508799650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692f734e7ca6d21499ac394ca8324b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionStates
 --- !u!1 &1560671427
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +701,118 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: c6d58fb6-9923-47ca-8b5a-40bacf0e3031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: c38bbe50-6dc3-403f-bde0-fc41a658b856
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: ae91791b-4af3-42a9-85e1-3f74d672e2f1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: 'Player/PotionA[/Keyboard/1]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: 'Player/PotionB[/Keyboard/2]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: 'Player/PotionC[/Keyboard/3]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1168399648}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1168399648}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1168399648}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPotionA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPotionB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPotionC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PotionStates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PotionStates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PotionStates, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856540923654476, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6256169573178861761, guid: e200f65baa91d5a468070a3373bfa3f1, type: 3}
       propertyPath: fpCamera
       value: 

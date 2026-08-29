@@ -69,7 +69,7 @@ using UnityEngine.InputSystem;
 
 public class Actions : MonoBehaviour
 {
-    [SerializeField] private GameObject potionPrefab;
+    // [SerializeField] private GameObject potionPrefab;
     [SerializeField] private Transform fpCamera;
     [SerializeField] private Transform potionHold;
 
@@ -87,7 +87,7 @@ public class Actions : MonoBehaviour
 
     void SpawnPotion()
     {
-        currentPotion = Instantiate(potionPrefab, potionHold.position, fpCamera.rotation, potionHold);
+        currentPotion = Instantiate(PotionStates.instance.activePotion, potionHold.position, fpCamera.rotation, potionHold);
         _rb = currentPotion.GetComponent<Rigidbody>();
 
         _rb.isKinematic = true;
