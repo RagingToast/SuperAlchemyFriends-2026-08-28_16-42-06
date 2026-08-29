@@ -107,15 +107,6 @@ public class Actions : MonoBehaviour
         // StartCoroutine(KillCoroutine(currentPotion));
         StartCoroutine(ThrowCooldown());
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (!collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("collided");
-        }
-    }
-    
     
     IEnumerator ThrowCooldown()
     {
@@ -127,9 +118,9 @@ public class Actions : MonoBehaviour
         SpawnPotion();
     }
 
-    // IEnumerator KillCoroutine(GameObject potion)
-    // {
-    //     yield return new WaitForSeconds(1f);
-    //     Destroy(potion);
-    // }
+    IEnumerator KillCoroutine(GameObject potion)
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(potion);
+    }
 }
