@@ -12,8 +12,11 @@ GameObject:
   - component: {fileID: 8922960007444748319}
   - component: {fileID: 1194737730793282634}
   - component: {fileID: 395443298765686533}
-  - component: {fileID: 6246203439608865794}
   - component: {fileID: 7499642514998331768}
+  - component: {fileID: 3517710955747914058}
+  - component: {fileID: 6315016995448740280}
+  - component: {fileID: 4365398381015690219}
+  - component: {fileID: -1063388837839195626}
   m_Layer: 0
   m_Name: RangeEnemyTest
   m_TagString: Untagged
@@ -116,21 +119,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6246203439608865794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534025770969499242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518fa2f11f563ad47bff1797273d8a91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RangeEnemy
-  enemyStateData: {fileID: 0}
-  enemyStatsData: {fileID: 11400000, guid: b6bb4a5bc7be86841a1028307fae3eee, type: 2}
-  agent: {fileID: 7499642514998331768}
 --- !u!195 &7499642514998331768
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -153,3 +141,80 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3517710955747914058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534025770969499242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e50a39e9602be48a3b0ae8782026cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  projectilePrefab: {fileID: 6833950247057852991, guid: ec802ec68b158a9498554fcc57b3f6ef, type: 3}
+--- !u!114 &6315016995448740280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534025770969499242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304fa2de8e735694fb74d130cbc0d739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RangeEnemy
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!54 &4365398381015690219
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534025770969499242}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &-1063388837839195626
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534025770969499242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

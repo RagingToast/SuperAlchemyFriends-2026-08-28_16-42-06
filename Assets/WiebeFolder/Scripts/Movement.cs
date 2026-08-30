@@ -16,11 +16,20 @@ public class Movement : MonoBehaviour
     private float _jumpForce = 2f;
     private float _checkRadius = .5f;
 
-    void Awake()
+    private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-    
+
     void FixedUpdate()
     {
         Vector3 forward  = fpCamera.forward;

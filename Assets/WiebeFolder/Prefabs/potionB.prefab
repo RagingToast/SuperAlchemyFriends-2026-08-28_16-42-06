@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1380735857255489964}
   - component: {fileID: 7366055309516872530}
   - component: {fileID: 6224862210035494701}
+  - component: {fileID: 6093289604855196644}
   m_Layer: 0
   m_Name: potionB
   m_TagString: Untagged
@@ -127,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7938bbdd56713b34bb622fad8e320bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Potion
-  potionNucleus: {fileID: 5214164493040198114, guid: 73506c10ae4ef104ca6811d495b86c5d, type: 3}
 --- !u!54 &6224862210035494701
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -155,6 +155,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6093289604855196644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413936430384642683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d798a000644e3b64f930e707249fad80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionLogic
+  projectileDamage: 20
+  objectPool: {fileID: 0}
+  playerTag: Player
+  enemyTag: Enemy
 --- !u!1 &3930262432931823380
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,9 @@ public class PotionEffect : MonoBehaviour
     [SerializeField] private GameObject potionNucleus;
 
     // private GameObject _currentNucleus;
-    
+
+    [SerializeField] EnemyStatsData enemyStatsData;
+
     private float _potionRadius = 1.5f;
     
     public static PotionEffect instance;
@@ -37,7 +39,10 @@ public class PotionEffect : MonoBehaviour
         
         foreach (Collider col in colliders)
         {
-            Debug.Log("DAMAGEEEEE");
+
+            EnemyHealth enemyHealth = col.gameObject.GetComponent<EnemyHealth>();
+
+            enemyHealth.TakeDamage(enemyStatsData.projectileDamage);
         }
     }
     

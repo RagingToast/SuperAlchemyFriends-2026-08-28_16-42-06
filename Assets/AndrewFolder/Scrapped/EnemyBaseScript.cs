@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class EnemyBaseScript : MonoBehaviour
 {
@@ -15,18 +16,16 @@ public class EnemyBaseScript : MonoBehaviour
 
     protected ObjectPool objectPool;
     public NavMeshAgent agent;
-    protected Camera playerCam;
+    
     private Vector3 setPath;
+    public float projectileActiveTime;
 
-    void Start()
+    protected Transform projectileSpawnPos;
+
+    public virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyStatsData.speed;
-
-        objectPool = GetComponent<ObjectPool>();
-        objectPool.PoolSetup(enemyStatsData.projectilePrefab, enemyStatsData.projectileAmount);
-
-        playerCam = Movement.Instance.GetComponentInChildren<Camera>();
     }
 
     public virtual void Update()
@@ -85,7 +84,7 @@ public class EnemyBaseScript : MonoBehaviour
     #endregion
 
     #region Attack State
-    private void Attack()
+    public virtual void Attack()
     {
         if (attackInCooldown)
         {
@@ -102,7 +101,7 @@ public class EnemyBaseScript : MonoBehaviour
         StartCoroutine(AttackRoutine());
     }
 
-    IEnumerator AttackRoutine()
+    public virtual IEnumerator AttackRoutine()
     {
         PlayerHealth.Instance.TakeDamage(enemyStatsData.damage);
 
@@ -119,12 +118,4 @@ public class EnemyBaseScript : MonoBehaviour
         agent.SetDestination(targetPos);
     }
     #endregion
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, enemyStateData.attackRange);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, enemyStateData.alertRange);
-    }
 }
