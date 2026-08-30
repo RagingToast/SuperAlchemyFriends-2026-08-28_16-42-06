@@ -1,12 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private LayerMask playerLayer;
     
+    private Animator animator;
+    
     private Transform _target;
     private Rigidbody _rigidbody;
-    
+    private bool _canAttack;
+
     public virtual float _speed { get; protected set; } = 0f;
     public virtual int _hp { get; protected set; } = 0;
 
@@ -18,11 +22,15 @@ public class EnemyBase : MonoBehaviour
     void Start()
     {
         _target = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = FindObjectOfType<Animator>();
     }
 
     void Update()
     {
         CheckForTarget();
+        
+        
+        
     }
     
     void  FixedUpdate()
@@ -32,6 +40,8 @@ public class EnemyBase : MonoBehaviour
         _rigidbody.linearVelocity = direction.normalized * _speed;
         
         _rigidbody.rotation = Quaternion.LookRotation(direction);
+        
+        animator.SetTrigger("Run");
     }
 
     void CheckForTarget()
@@ -41,6 +51,10 @@ public class EnemyBase : MonoBehaviour
         foreach (Collider target in targets)
         {
             Debug.Log("FOUNDDDDDDD");
+            if (_canAttack)
+            {
+                Attack();
+            }
         }
     }
     
@@ -48,6 +62,22 @@ public class EnemyBase : MonoBehaviour
     {
         _hp -= 10;
     }
+    
+    void Attack()
+       {
+          Debug.Log("Hit");
+          
+          StartCoroutine(AtkCooldown());
+       }
+    
+       IEnumerator AtkCooldown()
+       {
+          _canAttack = false;
+          
+          yield return new WaitForSeconds(2f);
+    
+          _canAttack = true;
+       }
     
     public void OnDrawGizmos()
     {
