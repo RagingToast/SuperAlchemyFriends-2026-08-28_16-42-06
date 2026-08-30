@@ -19,7 +19,7 @@ public class CollisionLogic : MonoBehaviour
         {
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
 
-            enemyHealth.TakeDamage(projectileDamage);
+            enemyHealth.TakeDamage();
         }
 
         DeactivateOnImpact();

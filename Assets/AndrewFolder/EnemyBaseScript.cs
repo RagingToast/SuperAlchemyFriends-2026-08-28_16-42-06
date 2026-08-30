@@ -15,7 +15,7 @@ public class EnemyBaseScript : MonoBehaviour
 
     protected ObjectPool objectPool;
     public NavMeshAgent agent;
-    protected Camera playerCam;
+    protected Transform playerCam;
     private Vector3 setPath;
 
     void Start()
@@ -26,7 +26,7 @@ public class EnemyBaseScript : MonoBehaviour
         objectPool = GetComponent<ObjectPool>();
         objectPool.PoolSetup(enemyStatsData.projectilePrefab, enemyStatsData.projectileAmount);
 
-        playerCam = Movement.Instance.GetComponentInChildren<Camera>();
+        playerCam = Movement.Instance.fpCamera;
     }
 
     public virtual void Update()
@@ -87,6 +87,7 @@ public class EnemyBaseScript : MonoBehaviour
     #region Attack State
     private void Attack()
     {
+        Debug.Log("Entered Attack State");
         if (attackInCooldown)
         {
             return;
@@ -115,6 +116,7 @@ public class EnemyBaseScript : MonoBehaviour
     #region Chase State
     public virtual void Chase()
     {
+        Debug.Log("Entered Chase State");
         Vector3 targetPos = new Vector3(Movement.Instance.transform.position.x, transform.position.y, Movement.Instance.transform.position.z);
         agent.SetDestination(targetPos);
     }

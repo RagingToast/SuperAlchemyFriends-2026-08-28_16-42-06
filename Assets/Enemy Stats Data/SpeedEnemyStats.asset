@@ -16,3 +16,7 @@ MonoBehaviour:
   health: 20
   speed: 10
   attackRate: 3
+  projectilePrefab: {fileID: 8921465377134589184, guid: a06869cd6b7dd29428d938172cf9d354, type: 3}
+  projectileAmount: 0
+  projectileDamage: 0
+  projectileSpeed: 0

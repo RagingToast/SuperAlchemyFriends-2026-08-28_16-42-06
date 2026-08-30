@@ -13,14 +13,20 @@ public class EnemyHealth : MonoBehaviour
         currentHP = maxHP;
     }
 
-    public float TakeDamage(float damageValue)
+
+    public void TakeDamage()
     {
-        currentHP -= damageValue;
-
-        Death();
-
-        return currentHP;
+        currentHP -= 10f;
     }
+    
+    // public float TakeDamage(float damageValue)
+    // {
+    //     currentHP -= damageValue;
+    //
+    //     Death();
+    //
+    //     return currentHP;
+    // }
 
     private void Death()
     {

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawnScript : MonoBehaviour
 {
-    [SerializeField] EnemySpawnData speedEnemyData, rangedEnemyData, tankEnemyData;
+    [SerializeField] EnemySpawnData speedEnemyData, tankEnemyData;
 
     [SerializeField] List<Transform> spawnPoints;
     [SerializeField] string winScene;
@@ -14,7 +14,7 @@ public class EnemySpawnScript : MonoBehaviour
     private void Start()
     {
         SetupLocalPool(speedEnemyData.enemyPrefab, speedEnemyData.numberOfEnemies);
-        SetupLocalPool(rangedEnemyData.enemyPrefab, rangedEnemyData.numberOfEnemies);
+        // SetupLocalPool(rangedEnemyData.enemyPrefab, rangedEnemyData.numberOfEnemies);
         SetupLocalPool(tankEnemyData.enemyPrefab, tankEnemyData.numberOfEnemies);
 
         ActivateEnemiesAtSpawnPoints();

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TankEnemySpawnData
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnData
   enemyPrefab: {fileID: 1236287966733990637, guid: 9609b3827cd03784bbb98c023465d2e2, type: 3}
-  numberOfEnemies: 5
+  numberOfEnemies: 2

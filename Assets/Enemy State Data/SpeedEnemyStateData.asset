@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SpeedEnemyStateData
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStateData
   attackRange: 2
-  alertRange: 10
-  wanderRange: 20
+  alertRange: 20
+  wanderRange: 30
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 1024

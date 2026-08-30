@@ -4,6 +4,8 @@ using UnityEngine;
 public class PotionEffect : MonoBehaviour
 {
     [SerializeField] private GameObject potionNucleus;
+    
+    public float projectileDamage;
 
     // private GameObject _currentNucleus;
     
@@ -37,7 +39,9 @@ public class PotionEffect : MonoBehaviour
         
         foreach (Collider col in colliders)
         {
-            Debug.Log("DAMAGEEEEE");
+            EnemyHealth enemyHealth = col.gameObject.GetComponent<EnemyHealth>();
+
+            enemyHealth.TakeDamage();
         }
     }
     
