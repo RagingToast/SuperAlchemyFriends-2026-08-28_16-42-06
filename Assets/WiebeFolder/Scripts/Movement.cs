@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform groundChecker;
     
     private Vector2 _moveInput;
-    private float _moveSpeed = 5f;
+    private float _moveSpeed = 6f;
     private Rigidbody _rb;
     
     private float _jumpForce = 2f;

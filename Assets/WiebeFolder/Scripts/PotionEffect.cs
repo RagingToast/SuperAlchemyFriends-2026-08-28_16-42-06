@@ -5,7 +5,7 @@ public class PotionEffect : MonoBehaviour
 {
     [SerializeField] private GameObject potionNucleus;
     
-    public float projectileDamage;
+    // public float projectileDamage;
 
     // private GameObject _currentNucleus;
     
@@ -39,7 +39,7 @@ public class PotionEffect : MonoBehaviour
         
         foreach (Collider col in colliders)
         {
-            EnemyHealth enemyHealth = col.gameObject.GetComponent<EnemyHealth>();
+            EnemyBase enemyHealth = col.gameObject.GetComponent<EnemyBase>();
 
             enemyHealth.TakeDamage();
         }

@@ -1,14 +1,16 @@
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private LayerMask playerLayer;
     
     private Transform _target;
     private Rigidbody _rigidbody;
-    private float _speed = 3f;
+    
+    public virtual float _speed { get; protected set; } = 0f;
+    public virtual int _hp { get; protected set; } = 0;
 
-    void Awake()
+    protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
@@ -23,11 +25,13 @@ public class EnemyMovement : MonoBehaviour
         CheckForTarget();
     }
     
-    void FixedUpdate()
+    void  FixedUpdate()
     {
         Vector3 direction = _target.position - transform.position;
         
         _rigidbody.linearVelocity = direction.normalized * _speed;
+        
+        _rigidbody.rotation = Quaternion.LookRotation(direction);
     }
 
     void CheckForTarget()
@@ -38,6 +42,11 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log("FOUNDDDDDDD");
         }
+    }
+    
+    public void TakeDamage()
+    {
+        _hp -= 10;
     }
     
     public void OnDrawGizmos()
